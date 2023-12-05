@@ -20,5 +20,6 @@ public class PlayerMoveControls : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(speed * gatherInput.valueX, rb.velocity.y);
+
     }
 }
