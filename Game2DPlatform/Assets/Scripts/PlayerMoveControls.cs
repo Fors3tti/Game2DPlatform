@@ -8,6 +8,7 @@ public class PlayerMoveControls : MonoBehaviour
 
     private GatherInput gatherInput;
     private Rigidbody2D rb;
+    private Animator anim;
 
     private int direction = 1;
 
@@ -16,10 +17,16 @@ public class PlayerMoveControls : MonoBehaviour
     {
         gatherInput = GetComponent<GatherInput>();
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        SetAnimatorValeus();
+    }
+
+    private void FixedUpdate()
     {
         Move();
     }
@@ -37,6 +44,10 @@ public class PlayerMoveControls : MonoBehaviour
             transform.localScale = new Vector3(-transform.localScale.x, 1, 1);
             direction *= -1;
         }
+    }
 
+    private void SetAnimatorValeus()
+    {
+        anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
     }
 }
