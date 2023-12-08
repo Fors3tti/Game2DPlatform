@@ -37,5 +37,6 @@ public class PlayerMoveControls : MonoBehaviour
             transform.localScale = new Vector3(-transform.localScale.x, 1, 1);
             direction *= -1;
         }
+
     }
 }
