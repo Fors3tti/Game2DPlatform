@@ -20,6 +20,9 @@ public class GatherInput : MonoBehaviour
         myControls.Player.Move.performed += StartMove;
         myControls.Player.Move.canceled += StopMove;
 
+        myControls.Player.Jump.performed += JumpStart;
+        myControls.Player.Jump.canceled += JumpStop;
+
         myControls.Player.Enable();
     }
 
@@ -27,6 +30,9 @@ public class GatherInput : MonoBehaviour
     {
         myControls.Player.Move.performed -= StartMove;
         myControls.Player.Move.canceled -= StopMove;
+
+        myControls.Player.Jump.performed -= JumpStart;
+        myControls.Player.Jump.canceled -= JumpStop;
 
         myControls.Player.Disable();
         //myControls.Disable();

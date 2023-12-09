@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMoveControls : MonoBehaviour
 {
     public float speed;
+    public float jumpForce;
 
     private GatherInput gatherInput;
     private Rigidbody2D rb;
@@ -29,12 +30,23 @@ public class PlayerMoveControls : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        JumpPlayer();
     }
 
     private void Move()
     {
         Flip();
         rb.velocity = new Vector2(speed * gatherInput.valueX, rb.velocity.y);
+    }
+
+    private void JumpPlayer()
+    {
+        if (gatherInput.jumpInput)
+        {
+            rb.velocity = new Vector2(gatherInput.valueX * speed, jumpForce);
+        }
+
+        gatherInput.jumpInput = false;
     }
 
     private void Flip()
