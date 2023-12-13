@@ -13,6 +13,11 @@ public class PlayerMoveControls : MonoBehaviour
 
     private int direction = 1;
 
+    public float rayLength;
+    public LayerMask groundLayer;
+    public Transform leftPoint;
+    private bool grounded = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +36,7 @@ public class PlayerMoveControls : MonoBehaviour
     {
         Move();
         JumpPlayer();
+        CheckStatus();
     }
 
     private void Move()
@@ -43,10 +49,33 @@ public class PlayerMoveControls : MonoBehaviour
     {
         if (gatherInput.jumpInput)
         {
-            rb.velocity = new Vector2(gatherInput.valueX * speed, jumpForce);
+            if(grounded)
+            {
+                rb.velocity = new Vector2(gatherInput.valueX * speed, jumpForce);
+            }
         }
 
         gatherInput.jumpInput = false;
+    }
+
+    private void CheckStatus()
+    {
+        RaycastHit2D leftCheckHit = Physics2D.Raycast(leftPoint.position, Vector2.down, rayLength, groundLayer);
+        if (leftCheckHit)
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
+        SeeRays(leftCheckHit);
+    }
+
+    private void SeeRays(RaycastHit2D leftCheckHit)
+    {
+        Color color1 = leftCheckHit ? Color.red : Color.green;
+        Debug.DrawRay(leftPoint.position, Vector2.down * rayLength, color1);
     }
 
     private void Flip()
