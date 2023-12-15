@@ -95,5 +95,7 @@ public class PlayerMoveControls : MonoBehaviour
     private void SetAnimatorValeus()
     {
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        anim.SetFloat("vSpeed", rb.velocity.y);
+        anim.SetBool("Grounded", grounded);
     }
 }
