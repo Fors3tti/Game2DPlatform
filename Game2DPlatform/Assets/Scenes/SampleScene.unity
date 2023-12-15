@@ -6639,6 +6639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 12
+  additionalJumps: 1
   rayLength: 0.025
   groundLayer:
     serializedVersion: 2
