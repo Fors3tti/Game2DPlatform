@@ -40,7 +40,8 @@ public class GatherInput : MonoBehaviour
 
     private void StartMove(InputAction.CallbackContext ctx)
     {
-        valueX = ctx.ReadValue<float>();
+        valueX = Mathf.RoundToInt(ctx.ReadValue<float>());
+        Debug.Log("valueX: " + valueX);
     }
 
     private void StopMove(InputAction.CallbackContext ctx)
