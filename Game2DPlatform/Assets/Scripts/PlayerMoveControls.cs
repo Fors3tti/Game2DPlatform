@@ -12,14 +12,17 @@ public class PlayerMoveControls : MonoBehaviour
     private Animator anim;
 
     private int direction = 1;
-    private bool doubleJump = true;
     public int additionalJumps = 2;
     private int resetJumpsNumber;
 
+    private bool doubleJump;
+
     public float rayLength;
+
     public LayerMask groundLayer;
     public Transform leftPoint;
     public Transform rightPoint;
+
     private bool grounded = true;
 
     // Start is called before the first frame update

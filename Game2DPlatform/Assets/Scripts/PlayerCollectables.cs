@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class PlayerCollectables : MonoBehaviour
 {
-    public Text textComponent;
+    private Text textComponent;
     public int gemNumber;
 
     // Start is called before the first frame update
     void Start()
     {
+        textComponent = GameObject.FindGameObjectWithTag("GemUI").GetComponentInChildren<Text>();
         UpdateText();
     }
 
