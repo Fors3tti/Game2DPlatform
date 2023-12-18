@@ -13,8 +13,6 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         health = maxHealth;
-        TakeDamage(20);
-        TakeDamage(20);
     }
 
     public void TakeDamage(float damage)
