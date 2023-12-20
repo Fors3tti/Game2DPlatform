@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GemUI
   - Stats
+  - HealthUI
   layers:
   - Default
   - TransparentFX
