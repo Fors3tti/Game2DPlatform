@@ -7286,6 +7286,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1277870237122186190, guid: 9881a29d66e148a49979e88c4035f85c, type: 3}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3191888658948227295, guid: 9881a29d66e148a49979e88c4035f85c, type: 3}
       propertyPath: m_TagString
       value: Stats
@@ -7404,6 +7408,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2337577043128821985, guid: 62e9bfa0779dd0f4e908121a1f857f6c, type: 3}
+      propertyPath: forceX
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337577043128821985, guid: 62e9bfa0779dd0f4e908121a1f857f6c, type: 3}
+      propertyPath: forceY
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337577043128821985, guid: 62e9bfa0779dd0f4e908121a1f857f6c, type: 3}
+      propertyPath: duration
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 4335796316000116914, guid: 62e9bfa0779dd0f4e908121a1f857f6c, type: 3}
       propertyPath: m_Name
       value: Spike
