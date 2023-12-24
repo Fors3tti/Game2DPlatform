@@ -50,6 +50,9 @@ TagManager:
   - name: MiddleGround
     uniqueID: 2048437709
     locked: 0
+  - name: Interectable
+    uniqueID: 2392145893
+    locked: 0
   - name: Collectable
     uniqueID: 331780085
     locked: 0
