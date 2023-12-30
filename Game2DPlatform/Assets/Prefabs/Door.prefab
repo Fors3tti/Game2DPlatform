@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 331780085
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fd1287534e7d62c4c852230a1f9b92b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 10b8ea26c58bcba449dfb958c7811216, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,7 +121,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8914188777836901801}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -157,7 +157,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.81192684, y: 1.739599}
+  m_Size: {x: 0.3909235, y: 1.739599}
   m_EdgeRadius: 0
 --- !u!114 &5576138740963274529
 MonoBehaviour:
@@ -171,5 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2736f842469474cb8f33df19698717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fader: {fileID: 0}
-  lvlToLoad: 2
+  unlockedSprite: {fileID: 21300000, guid: fd1287534e7d62c4c852230a1f9b92b7, type: 3}
+  lvlToLoad: 1

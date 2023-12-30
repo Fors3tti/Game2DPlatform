@@ -201,17 +201,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &64127236 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2414633247525835713, guid: 3cd5d9b257787d54282bf4a6465f4e0b, type: 3}
-  m_PrefabInstance: {fileID: 8329091391112627555}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b85bd7d06304ff4195c8841a45d1a70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &245048296
 GameObject:
   m_ObjectHideFlags: 0
@@ -8025,22 +8014,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1225209838065450735, guid: 800e3388d55fdfd4a8fcdee8e5c46b86, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 10b8ea26c58bcba449dfb958c7811216, type: 3}
-    - target: {fileID: 1699277138944908437, guid: 800e3388d55fdfd4a8fcdee8e5c46b86, type: 3}
-      propertyPath: m_Size.x
-      value: 0.3909235
-      objectReference: {fileID: 0}
-    - target: {fileID: 1699277138944908437, guid: 800e3388d55fdfd4a8fcdee8e5c46b86, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1699277138944908437, guid: 800e3388d55fdfd4a8fcdee8e5c46b86, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.012357235
-      objectReference: {fileID: 0}
     - target: {fileID: 4436319232151070785, guid: 800e3388d55fdfd4a8fcdee8e5c46b86, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.34286
@@ -8082,9 +8055,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5576138740963274529, guid: 800e3388d55fdfd4a8fcdee8e5c46b86, type: 3}
-      propertyPath: fader
-      value: 
-      objectReference: {fileID: 64127236}
+      propertyPath: lvlToLoad
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8914188777836901801, guid: 800e3388d55fdfd4a8fcdee8e5c46b86, type: 3}
       propertyPath: m_Name
       value: Door

@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager GM;
     private Fader fader;
+    private Door theDoor;
+    private List<GemController> gems;
 
     private void Awake()
     {
@@ -16,6 +18,8 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(gameObject);
+
+        gems = new List<GemController>();
     }
 
     // Start is called before the first frame update
@@ -32,6 +36,14 @@ public class GameManager : MonoBehaviour
         GM.fader = fD;
     }
 
+    public static void RegisterDoor(Door door)
+    {
+        if (GM == null)
+            return;
+
+        GM.theDoor = door;
+    }
+
     public static void ManagerLoadLevel(int index)
     {
         if (GM == null)
@@ -44,8 +56,26 @@ public class GameManager : MonoBehaviour
     {
         if (GM == null)
             return;
-
+        GM.gems.Clear();
         GM.fader.RestartLevel();
     }
 
+    public static void RegisterGem(GemController gem)
+    {
+        if (GM == null)
+            return;
+        
+        if(!GM.gems.Contains(gem))
+            GM.gems.Add(gem);
+    }
+
+    public static void RemoveGemFromList(GemController gem)
+    {
+        if (GM == null)
+            return;
+
+        GM.gems.Remove(gem);
+        if (GM.gems.Count == 0)
+            GM.theDoor.UnlockDoor();
+    }
 }
