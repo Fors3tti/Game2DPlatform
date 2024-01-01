@@ -11,6 +11,8 @@ public class PlayerCollectables : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gemNumber = PlayerPrefs.GetInt("GetNumber", 0);
+
         textComponent = GameObject.FindGameObjectWithTag("GemUI").GetComponentInChildren<Text>();
         UpdateText();
     }
