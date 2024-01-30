@@ -25,7 +25,7 @@ public class PlayerMoveControls : MonoBehaviour
 
     private bool grounded = true;
 
-    private bool knockBack = false;
+    public bool knockBack = false;
     public bool hasControl = true;
 
     // Start is called before the first frame update
