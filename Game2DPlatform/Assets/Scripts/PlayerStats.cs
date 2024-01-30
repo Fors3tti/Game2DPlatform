@@ -13,6 +13,7 @@ public class PlayerStats : MonoBehaviour
 
     private Animator anim;
     private PlayerMoveControls playerMove;
+    private PlayerAttackControls pAC;
 
     private Image healthUI;
 
@@ -21,6 +22,7 @@ public class PlayerStats : MonoBehaviour
     {
         anim = GetComponentInParent<Animator>();
         playerMove = GetComponentInParent<PlayerMoveControls>();
+        pAC = GetComponentInParent<PlayerAttackControls>();
         //health = maxHealth;
         health = PlayerPrefs.GetFloat("HealthKey", maxHealth);
 
@@ -37,6 +39,7 @@ public class PlayerStats : MonoBehaviour
             playerMove.hasControl = false;
 
             UpdateHealthUI();
+            pAC.ResetAttack();
 
             if (health <= 0)
             {

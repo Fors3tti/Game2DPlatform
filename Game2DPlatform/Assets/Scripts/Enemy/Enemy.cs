@@ -15,9 +15,12 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void TakeDamage(float damage)
     {
-        
+        health -= damage;
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
