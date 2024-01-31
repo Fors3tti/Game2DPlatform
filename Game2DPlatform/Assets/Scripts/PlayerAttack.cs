@@ -5,12 +5,15 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public float attackDamage;
+
     private int enemyLayer;
+    private int destructibleLayer;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyLayer = LayerMask.NameToLayer("Enemy");
+        destructibleLayer = LayerMask.NameToLayer("Destructible");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,6 +21,11 @@ public class PlayerAttack : MonoBehaviour
         if(collision.gameObject.layer == enemyLayer)
         {
             collision.GetComponent<Enemy>().TakeDamage(attackDamage);
+        }
+
+        if(collision.gameObject.layer == destructibleLayer)
+        {
+            collision.GetComponent<Destructible>().HitDestructible();
         }
     }
 }
