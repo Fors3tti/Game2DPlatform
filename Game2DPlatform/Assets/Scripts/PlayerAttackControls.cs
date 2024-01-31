@@ -10,6 +10,7 @@ public class PlayerAttackControls : MonoBehaviour
 
     public bool attackStarted = false;
     public PolygonCollider2D polyCol;
+    public AudioSource source;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class PlayerAttackControls : MonoBehaviour
     public void ActivateAttack()
     {
         polyCol.enabled = true;
+        source.Play();
     }
 
     public void ResetAttack()
@@ -48,5 +50,6 @@ public class PlayerAttackControls : MonoBehaviour
         gI.tryAttack = false;
         attackStarted = false;
         polyCol.enabled = false;
+        source.Stop();
     }
 }
