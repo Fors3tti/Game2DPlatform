@@ -15,7 +15,7 @@ public class PlayerMoveControls : MonoBehaviour
     public int additionalJumps = 2;
     private int resetJumpsNumber;
 
-    private bool doubleJump;
+    private bool doubleJump = true;
 
     public float rayLength;
 
@@ -68,6 +68,10 @@ public class PlayerMoveControls : MonoBehaviour
         {
             rb.gravityScale = 0;
             rb.velocity = new Vector2(climbHorizontalSpeed * gatherInput.valueX, climbSpeed * gatherInput.valueY);
+            if (rb.velocity.y == 0)
+                anim.enabled = false;
+            else
+                anim.enabled = true;
         }
     }
 
@@ -75,6 +79,7 @@ public class PlayerMoveControls : MonoBehaviour
     {
         rb.gravityScale = startGravity;
         onLadders = false;
+        anim.enabled = true;
     }
 
     private void JumpPlayer()
@@ -139,6 +144,7 @@ public class PlayerMoveControls : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         anim.SetFloat("vSpeed", rb.velocity.y);
         anim.SetBool("Grounded", grounded);
+        anim.SetBool("Climb", onLadders);
     }
 
     public IEnumerator KnockBack(float forceX, float forceY, float duration, Transform otherObject)

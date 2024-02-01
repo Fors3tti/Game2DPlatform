@@ -30,7 +30,7 @@ public class PlayerAttackControls : MonoBehaviour
     {
         if (gI.tryAttack)
         {
-            if (attackStarted || pMC.hasControl == false || pMC.knockBack)
+            if (attackStarted || pMC.hasControl == false || pMC.knockBack || pMC.onLadders)
                 return;
 
             anim.SetBool("Attack", true);
