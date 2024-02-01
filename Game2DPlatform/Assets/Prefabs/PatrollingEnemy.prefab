@@ -353,5 +353,5 @@ MonoBehaviour:
   wallCheck: {fileID: 6115325498033225713}
   layerToCheck:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 8320
   radius: 0.25
