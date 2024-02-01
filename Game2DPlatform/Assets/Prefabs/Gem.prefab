@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 331780085
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1649003570, guid: 514fcaed7ba3efa469ca631b0474e40c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869ce4bbc79b28a47ac9e368da050df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gemParticle: {fileID: 3809319133237004135, guid: c48fc5c7dd0441647a2761487f448093, type: 3}
 --- !u!95 &4672597533381252392
 Animator:
   serializedVersion: 5

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GemController : MonoBehaviour
 {
+    public GameObject gemParticle;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class GemController : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().enabled = false;
 
+            Instantiate(gemParticle, transform.position, transform.rotation);
             GameManager.RemoveGemFromList(this);
         }
     }
