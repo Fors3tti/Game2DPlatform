@@ -28,12 +28,19 @@ public class PlayerMoveControls : MonoBehaviour
     public bool knockBack = false;
     public bool hasControl = true;
 
+    public bool onLadders;
+    public float climbSpeed;
+    public float climbHorizontalSpeed;
+
+    private float startGravity;
+
     // Start is called before the first frame update
     void Start()
     {
         gatherInput = GetComponent<GatherInput>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        startGravity = rb.gravityScale;
 
         resetJumpsNumber = additionalJumps;
     }
@@ -57,19 +64,32 @@ public class PlayerMoveControls : MonoBehaviour
     {
         Flip();
         rb.velocity = new Vector2(speed * gatherInput.valueX, rb.velocity.y);
+        if (onLadders)
+        {
+            rb.gravityScale = 0;
+            rb.velocity = new Vector2(climbHorizontalSpeed * gatherInput.valueX, climbSpeed * gatherInput.valueY);
+        }
+    }
+
+    public void ExitLadders()
+    {
+        rb.gravityScale = startGravity;
+        onLadders = false;
     }
 
     private void JumpPlayer()
     {
         if (gatherInput.jumpInput)
         {
-            if(grounded)
+            if(grounded || onLadders)
             {
+                ExitLadders();
                 rb.velocity = new Vector2(gatherInput.valueX * speed, jumpForce);
                 doubleJump = true;
             }
             else if (additionalJumps > 0)
             {
+                ExitLadders();
                 rb.velocity = new Vector2(gatherInput.valueX * speed, jumpForce);
                 doubleJump = false;
                 additionalJumps -= 1;
