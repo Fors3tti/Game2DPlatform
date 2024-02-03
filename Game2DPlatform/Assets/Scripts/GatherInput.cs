@@ -15,6 +15,8 @@ public class GatherInput : MonoBehaviour
     public float valueY;
     public bool tryToClimb;
 
+    private bool pause = false;
+
     private void Awake()
     {
         myControls = new Controls();
@@ -34,7 +36,10 @@ public class GatherInput : MonoBehaviour
         myControls.Player.Climb.performed += ClimbStart;
         myControls.Player.Climb.canceled += ClimbStop;
 
+        myControls.UI.Pause.performed += PauseGame;
+
         myControls.Player.Enable();
+        myControls.UI.Pause.Enable();
     }
 
     private void OnDisable()
@@ -51,7 +56,10 @@ public class GatherInput : MonoBehaviour
         myControls.Player.Climb.performed -= ClimbStart;
         myControls.Player.Climb.canceled -= ClimbStop;
 
+        myControls.UI.Pause.performed -= PauseGame;
+
         myControls.Player.Disable();
+        myControls.UI.Pause.Disable();
         //myControls.Disable();
     }
 
@@ -119,5 +127,22 @@ public class GatherInput : MonoBehaviour
     {
         tryToClimb = false;
         valueY = 0;
+    }
+
+    private void PauseGame(InputAction.CallbackContext ctx)
+    {
+        pause = !pause;
+        if (pause)
+        {
+            AudioListener.pause = true;
+            Time.timeScale = 0;
+            myControls.Player.Disable();
+        }
+        else
+        {
+            myControls.Player.Enable();
+            AudioListener.pause = false;
+            Time.timeScale = 1;
+        }
     }
 }
