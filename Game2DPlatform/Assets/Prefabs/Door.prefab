@@ -172,4 +172,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockedSprite: {fileID: 21300000, guid: fd1287534e7d62c4c852230a1f9b92b7, type: 3}
-  lvlToLoad: 1
+  lvlToLoad: 2

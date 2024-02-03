@@ -167,7 +167,7 @@
                 {
                     "name": "",
                     "id": "95527aa0-1887-423e-a07f-98d072ba127f",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -203,7 +203,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Climb",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -214,7 +214,40 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Climb",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Keyboard",
+                    "id": "29cc97de-17d1-4413-8ad6-4233072f48af",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
                     "groups": "",
+                    "action": "Climb",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "efaf4f50-c484-4c70-af0a-8d1e5ad2cdc0",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Climb",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "db94d3af-1174-41af-a5b5-464ca41833dd",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
                     "action": "Climb",
                     "isComposite": false,
                     "isPartOfComposite": true

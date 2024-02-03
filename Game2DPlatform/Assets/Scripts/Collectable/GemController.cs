@@ -5,6 +5,7 @@ using UnityEngine;
 public class GemController : MonoBehaviour
 {
     public GameObject gemParticle;
+
     // Start is called before the first frame update
     void Start()
     {

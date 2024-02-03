@@ -393,7 +393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3e756d330275449a5b67eb2c54aec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemNumber: 0
+  textComponent: {fileID: 0}
+  gemNumber: 5
 --- !u!114 &2217547379360970398
 MonoBehaviour:
   m_ObjectHideFlags: 0
