@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpForce: 12
+  jumpForce: 10
   additionalJumps: 1
   rayLength: 0.025
   groundLayer:
@@ -393,7 +393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e3e756d330275449a5b67eb2c54aec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textComponent: {fileID: 0}
   gemNumber: 5
 --- !u!114 &2217547379360970398
 MonoBehaviour:

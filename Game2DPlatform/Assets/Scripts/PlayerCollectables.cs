@@ -19,7 +19,7 @@ public class PlayerCollectables : MonoBehaviour
 
     private void UpdateText()
     {
-        textComponent.text = gemNumber.ToString();
+        textComponent.text = gemNumber.ToString(); 
     }
 
     public void GemCollected()
